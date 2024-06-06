@@ -4,6 +4,7 @@ package web.com.farmacia.controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import web.com.farmacia.doMain.modelo.usuario;
 
 import java.net.URI;
 import java.nio.file.Path;
@@ -16,7 +17,10 @@ public class UsuarioController {
 
 
 
-    private usuarioController(UsuarioService)
+    private usuarioController(UsuarioService usuarioService){
+
+        this.usuarioService = usuarioService;
+    }
 
 
 
