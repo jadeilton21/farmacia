@@ -15,7 +15,8 @@ public class UsuarioController {
 
     private ResponseEntity<usuario> pegarUsuarios(@PathVariable Long id){
 
-
+        var usuario = usuarioServidor.pegarUsuario(id);
+        return ResponseEntity.ok(usuario);
     }
 
 }
