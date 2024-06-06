@@ -10,16 +10,22 @@ import java.nio.file.Path;
 @RequestMapping("/usuario")
 public class UsuarioController {
 
+    private final usuarioService usuarioService;
+
+
+
+    private usuarioController(UsuarioService)
+
 
 
     @GetMapping("/{id}")
     private ResponseEntity<usuario> pegarUsuarios(@PathVariable Long id){
 
-        var usuario = usuarioServidor.pegarUsuario(id);
+        var usuario = usuarioService.pegarUsuario(id);
         return ResponseEntity.ok(usuario);
     }
 
-
+    @PostMapping
     private ResponseEntity<usuario> criarUsuarios(@RequestBody usuario criarUsuario){
 
 
