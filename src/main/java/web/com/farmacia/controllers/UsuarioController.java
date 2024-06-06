@@ -28,14 +28,14 @@ public class UsuarioController {
     }
 
     @PostMapping
-    private ResponseEntity<usuario> criarUsuarios(@RequestBody usuario criarUsuario){
+    private ResponseEntity<usuario> criarUsuarios(@RequestBody usuario criarUmUsuario){
 
-        var userCreated = usuarioService.criarUsuarios(criarUsuario);
+        var usuarioCriar = usuarioService.criarUsuarios(criarUmUsuario);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(userCreated.getId())
+                .buildAndExpand(usuarioCriar.getId())
                 .toUri();
-        return ResponseEntity.created(location).body(userCreated);
+        return ResponseEntity.created(location).body(usuarioCriar);
 
     }
 
