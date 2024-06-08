@@ -4,6 +4,7 @@ package web.com.farmacia.controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import web.com.farmacia.doMain.modelo.Usuario;
 import web.com.farmacia.doMain.modelo.usuario;
 
 import java.net.URI;
@@ -25,14 +26,14 @@ public class UsuarioController {
 
 
     @GetMapping("/{id}")
-    private ResponseEntity<usuario> pegarUsuarios(@PathVariable Long id){
+    private ResponseEntity<Usuario> pegarUsuarios(@PathVariable Long id){
 
         var usuario = usuarioService.pegarUsuario(id);
         return ResponseEntity.ok(usuario);
     }
 
     @PostMapping
-    private ResponseEntity<usuario> criarUsuarios(@RequestBody usuario criarUmUsuario){
+    private ResponseEntity<Usuario> criarUsuarios(@RequestBody Usuario criarUmUsuario){
 
         var usuarioCriar = usuarioService.criarUsuarios(criarUmUsuario);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
