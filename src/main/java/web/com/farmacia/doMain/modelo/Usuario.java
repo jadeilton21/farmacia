@@ -1,12 +1,22 @@
 package web.com.farmacia.doMain.modelo;
 
+import jakarta.persistence.*;
+
+import javax.smartcardio.Card;
+
 public class Usuario {
 
 
-
+    @Id
+    @GeneratedValue
     private Long id;
+
     private String nome;
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Conta conta;
+
+
     private Factura factura;
     private Card card;
     private Lis<News> news;
