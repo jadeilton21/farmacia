@@ -1,11 +1,12 @@
 package web.com.farmacia.doMain.modelo;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 import java.math.BigDecimal;
-
+@Entity(name = "tb_conta")
 public class Conta {
 
 
