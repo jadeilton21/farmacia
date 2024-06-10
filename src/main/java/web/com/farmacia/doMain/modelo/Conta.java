@@ -16,6 +16,22 @@ public class Conta {
     private BigDecimal limiteDaConta;
 
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNumeroConta(String numeroConta) {
+        this.numeroConta = numeroConta;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    public void setLimiteDaConta(BigDecimal limiteDaConta) {
+        this.limiteDaConta = limiteDaConta;
+    }
+
     public Long getId() {
         return id;
     }
