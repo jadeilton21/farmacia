@@ -1,18 +1,23 @@
 package web.com.farmacia.doMain.modelo;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.math.BigDecimal;
 
 public class Conta {
 
 
-
+    @Id
+    @GeneratedValue
     private Long id;
-
+    @Column(unique = true)
     private String numeroConta;
 
-
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
-
+    @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limiteDaConta;
 
 
