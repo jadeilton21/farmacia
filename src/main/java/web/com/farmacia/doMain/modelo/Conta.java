@@ -16,7 +16,19 @@ public class Conta {
     private BigDecimal limiteDaConta;
 
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getNumeroConta() {
+        return numeroConta;
+    }
 
+    public BigDecimal getBalance() {
+        return balance;
+    }
 
+    public BigDecimal getLimiteDaConta() {
+        return limiteDaConta;
+    }
 }
