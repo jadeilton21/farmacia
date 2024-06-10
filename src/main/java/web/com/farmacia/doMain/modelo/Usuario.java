@@ -12,6 +12,30 @@ public class Usuario {
     private Lis<News> news;
 
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
+
+    public void setFactura(Factura factura) {
+        this.factura = factura;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
+    }
+
+    public void setNews(Lis<News> news) {
+        this.news = news;
+    }
+
     public Long getId() {
         return id;
     }
