@@ -1,13 +1,23 @@
 package web.com.farmacia.doMain.modelo;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+import javax.annotation.processing.Generated;
 import java.math.BigDecimal;
 
 public class Card {
 
 
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(unique = true)
     private String numerdoConta;
 
-
+    @Column(name = "available_limit", precision = 13, scale = 2)
     private BigDecimal limite;
 
     public String getNumerdoConta() {
