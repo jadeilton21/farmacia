@@ -17,9 +17,11 @@ public class Usuario {
     @OneToOne(cascade = CascadeType.ALL)
     private Conta conta;
 
-
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Factura> factura;
+    @OneToOne(cascade = CascadeType.ALL)
     private Card card;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
 
 
@@ -36,7 +38,7 @@ public class Usuario {
     }
 
     public void setFactura(Factura factura) {
-        this.factura = factura;
+        this.factura = (List<Factura>) factura;
     }
 
     public void setCard(Card card) {
@@ -60,7 +62,7 @@ public class Usuario {
     }
 
     public Factura getFactura() {
-        return factura;
+        return (Factura) factura;
     }
 
     public Card getCard() {
