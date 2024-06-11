@@ -18,7 +18,7 @@ public class Usuario {
     private Conta conta;
 
 
-    private Factura factura;
+    private List<Factura> factura;
     private Card card;
     private List<News> news;
 
