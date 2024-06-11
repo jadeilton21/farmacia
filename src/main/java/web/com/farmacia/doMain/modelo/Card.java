@@ -1,12 +1,14 @@
 package web.com.farmacia.doMain.modelo;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 import javax.annotation.processing.Generated;
 import java.math.BigDecimal;
 
+@Entity(name = "tb_card")
 public class Card {
 
 
