@@ -10,7 +10,12 @@ public class Card {
 
     private BigDecimal limite;
 
+    public String getNumerdoConta() {
+        return numerdoConta;
+    }
 
-
+    public BigDecimal getLimite() {
+        return limite;
+    }
 
 }
