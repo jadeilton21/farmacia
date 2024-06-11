@@ -2,7 +2,8 @@ package web.com.farmacia.doMain.modelo;
 
 import jakarta.persistence.*;
 
-import javax.smartcardio.Card;
+import java.util.List;
+
 
 public class Usuario {
 
@@ -19,7 +20,7 @@ public class Usuario {
 
     private Factura factura;
     private Card card;
-    private Lis<News> news;
+    private List<News> news;
 
 
     public void setId(Long id) {
@@ -42,7 +43,7 @@ public class Usuario {
         this.card = card;
     }
 
-    public void setNews(Lis<News> news) {
+    public void setNews(List<News> news) {
         this.news = news;
     }
 
@@ -66,7 +67,7 @@ public class Usuario {
         return card;
     }
 
-    public Lis<News> getNews() {
+    public List<News> getNews() {
         return news;
     }
 }
