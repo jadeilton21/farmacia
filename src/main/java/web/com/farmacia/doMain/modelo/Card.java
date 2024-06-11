@@ -18,4 +18,11 @@ public class Card {
         return limite;
     }
 
+    public void setNumerdoConta(String numerdoConta) {
+        this.numerdoConta = numerdoConta;
+    }
+
+    public void setLimite(BigDecimal limite) {
+        this.limite = limite;
+    }
 }
