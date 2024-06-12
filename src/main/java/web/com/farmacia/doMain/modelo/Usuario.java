@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-
+@Entity(name = "tb_usuario")
 public class Usuario {
 
 
