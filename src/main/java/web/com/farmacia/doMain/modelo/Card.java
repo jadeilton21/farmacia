@@ -1,9 +1,6 @@
 package web.com.farmacia.doMain.modelo;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import javax.annotation.processing.Generated;
 import java.math.BigDecimal;
@@ -13,7 +10,7 @@ public class Card {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)
