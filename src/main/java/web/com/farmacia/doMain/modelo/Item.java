@@ -17,4 +17,17 @@ public abstract class Item {
 
 
     private String descricao;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getIcone() {
+        return icone;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }
