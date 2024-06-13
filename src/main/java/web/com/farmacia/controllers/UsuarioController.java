@@ -5,7 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import web.com.farmacia.doMain.modelo.Usuario;
-import web.com.farmacia.doMain.modelo.usuario;
+import web.com.farmacia.service.UsuarioService;
+
 
 import java.net.URI;
 import java.nio.file.Path;
@@ -14,7 +15,7 @@ import java.nio.file.Path;
 @RequestMapping("/usuario")
 public class UsuarioController {
 
-    private final usuarioService usuarioService;
+    private final UsuarioService usuarioService;
 
 
 
