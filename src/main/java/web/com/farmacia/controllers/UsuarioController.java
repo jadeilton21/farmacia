@@ -24,12 +24,15 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
+    public UsuarioController(UsuarioService usuarioService) {
+        this.usuarioService = usuarioService;
+    }
 
 
     @GetMapping("/{id}")
     private ResponseEntity<Usuario> pegarUsuarios(@PathVariable Long id){
 
-        var usuario = usuarioService.pegarUsuario(id);
+        var usuario = usuarioService.pegarUsuarios(id);
         return ResponseEntity.ok(usuario);
     }
 
