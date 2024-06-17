@@ -1,6 +1,7 @@
 package web.com.farmacia.controllers;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -15,18 +16,15 @@ import java.nio.file.Path;
 @RequestMapping("/usuario")
 public class UsuarioController {
 
+
     private final UsuarioService usuarioService;
 
 
-
-    private usuarioController(UsuarioService usuarioService){
+    private UsuarioController(UsuarioService usuarioService){
 
         this.usuarioService = usuarioService;
     }
 
-    public UsuarioController(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }
 
 
     @GetMapping("/{id}")
