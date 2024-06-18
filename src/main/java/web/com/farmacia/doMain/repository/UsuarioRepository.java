@@ -8,5 +8,5 @@ import web.com.farmacia.doMain.modelo.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
 
-    boolean existePorContaDoNumero(String numero);
+    boolean existsByContaNumero(String numero);
 }
