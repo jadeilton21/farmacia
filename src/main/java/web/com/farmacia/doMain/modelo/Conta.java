@@ -11,7 +11,7 @@ public class Conta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private String numeroConta;
+    private String numero;
 
     @Column(precision = 13, scale = 2)
     private BigDecimal balance;
@@ -23,8 +23,8 @@ public class Conta {
         this.id = id;
     }
 
-    public void setNumeroConta(String numeroConta) {
-        this.numeroConta = numeroConta;
+    public void setNumero(String numeroConta) {
+        this.numero = numeroConta;
     }
 
     public void setBalance(BigDecimal balance) {
@@ -39,8 +39,8 @@ public class Conta {
         return id;
     }
 
-    public String getNumeroConta() {
-        return numeroConta;
+    public String getNumero() {
+        return numero;
     }
 
     public BigDecimal getBalance() {
