@@ -37,4 +37,10 @@ class ManipuladorDeExcecoesGlobalTest {
                 .isEqualTo(HttpStatus.FORBIDDEN.value());
 
     }
+
+    @Test
+    @DisplayName("Deve Devolver Código http 404 quando informações forem invalidas")
+    @AutoConfigureMockMvc
+    void handleNotFoundException() throws Exception{
+    }
 }
