@@ -1,5 +1,6 @@
 package web.com.farmacia.controllers.exception;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -20,4 +21,12 @@ class ManipuladorDeExcecoesGlobalTest {
     private MockMvc mockMvc;
 
 
+    @Test
+    @DisplayName("Deve devolver código http 404 quando informações forem invalidas...")
+    void handleBusinessException() throws Exception {
+
+
+
+
+    }
 }
