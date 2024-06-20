@@ -20,13 +20,12 @@ class ManipuladorDeExcecoesGlobalTest {
 
 
 
-    @MockBean
+    @Autowired
     private MockMvc mockMvc;
 
 
     @Test
     @DisplayName("Deve devolver código http 404 quando informações forem invalidas...")
-
     void handleBusinessException_cenario1() throws Exception {
 
         var response = mockMvc
@@ -35,6 +34,15 @@ class ManipuladorDeExcecoesGlobalTest {
 
         assertThat(response.getStatus())
                 .isEqualTo(HttpStatus.FORBIDDEN.value());
+
+    }
+
+    @Test
+    @DisplayName("Deve Devolver Código http 404 quando informações forem invalidas")
+    void handleNotFoundException() throws Exception{
+
+
+
 
     }
 }
