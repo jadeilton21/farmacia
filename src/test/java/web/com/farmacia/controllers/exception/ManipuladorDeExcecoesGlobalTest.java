@@ -41,5 +41,17 @@ class ManipuladorDeExcecoesGlobalTest {
     @Test
     @DisplayName("Deve devolver código http 404 quando informações forem invalidas...")
     void handleNotFoundException() throws Exception {
+
+
+
+
+        var response = mockMvc.perform(
+                post("/")
+        ).andReturn().getResponse();
+
+
+
+        assertThat(response.getStatus())
+                .isEqualTo(HttpStatus.BAD_REQUEST.value());
     }
 }
