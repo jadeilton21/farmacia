@@ -20,7 +20,7 @@ class ManipuladorDeExcecoesGlobalTest {
 
 
 
-    @MockBean
+    @Autowired
     private MockMvc mockMvc;
 
 
