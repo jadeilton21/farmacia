@@ -40,7 +40,7 @@ class ManipuladorDeExcecoesGlobalTest {
 
     @Test
     @DisplayName("Deve devolver código http 404 quando informações forem invalidas...")
-    void handleNotFoundException() throws Exception {
+    void handleNotFoundException_cenario1() throws Exception {
 
 
 
@@ -56,6 +56,6 @@ class ManipuladorDeExcecoesGlobalTest {
     }
 
     @Test
-    void handleUnexpectedException() {
+    void handleUnexpectedException_cenario1() {
     }
 }
