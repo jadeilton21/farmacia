@@ -25,6 +25,7 @@ public class UsuarioController {
     }
 
 
+
     @GetMapping("/{id}")
     private ResponseEntity<Usuario> pegarUsuarios(@PathVariable Long id){
 
