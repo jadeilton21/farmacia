@@ -24,7 +24,6 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-
     @GetMapping("/{id}")
     private ResponseEntity<Usuario> pegarUsuarios(@PathVariable Long id){
 
